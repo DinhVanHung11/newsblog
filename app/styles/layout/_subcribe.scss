@@ -1,0 +1,100 @@
+.subcribe {
+  background-color: $bg-color;
+  padding: 7rem 0;
+  &-container {
+    padding: 10rem 0;
+    border-radius: 2rem;
+    background-color: white;
+  }
+  &-heading,
+  &-desc {
+    text-align: center;
+  }
+  &-heading {
+    margin-bottom: 1rem;
+  }
+  &-desc {
+    color: $gray-color;
+    margin-bottom: 6rem;
+  }
+  &-form {
+    width: max-content;
+    margin: 0 auto;
+    display: flex;
+    gap: 0 0.5rem;
+  }
+  &-input-box {
+    position: relative;
+    .fa-check,
+    .fa-times {
+      position: absolute;
+      right: 2rem;
+      top: 50%;
+      transform: translateY(-50%);
+      font-weight: 300;
+      color: red;
+      display: none;
+    }
+    .fa-check {
+      color: blue;
+    }
+  }
+
+  &-input {
+    background-color: $bg-color;
+    width: 40rem;
+    padding: 1rem 5rem 1rem 2rem;
+    border-radius: 0.6rem;
+    font-size: 1.7rem;
+    line-height: 2.55rem;
+    color: #111111;
+    transition: all 0.2s;
+    &::placeholder {
+      font-size: 1.7rem;
+      line-height: 2.55rem;
+      color: $gray-color;
+    }
+    &:focus {
+      border: 1px solid $blue-color;
+    }
+  }
+  &-input.valid {
+    border: 1px solid $blue-color;
+  }
+  &-input.invalid {
+    border: 1px solid red;
+    + .fa-times {
+      display: block;
+    }
+  }
+  &-btn {
+    padding: 1.2rem 3.5rem;
+    border-radius: 0.6rem;
+    color: white;
+    font-weight: 600;
+    line-height: 2.6rem;
+    font-size: 1.8rem;
+    background-color: $blue-color;
+    transition: all 0.2s;
+    &:hover {
+      background-color: #3b4bd1;
+    }
+  }
+  @include maxWidth(767px) {
+    &-form {
+      flex-direction: column;
+      gap: 2rem 0;
+      margin: 0;
+      width: 100%;
+    }
+    &-desc {
+      margin-bottom: 2rem;
+    }
+    &-container {
+      padding: 3rem 2rem;
+    }
+    &-input {
+      width: 100%;
+    }
+  }
+}

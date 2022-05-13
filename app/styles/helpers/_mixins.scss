@@ -1,0 +1,125 @@
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+@mixin bgImage($src, $color1, $color2) {
+  background: linear-gradient(to right, $color1, $color2),
+    url($src) no-repeat center / cover;
+}
+
+@mixin bgImage2($src) {
+  background: linear-gradient(
+      to bottom,
+      rgba(31, 31, 31, 0.63),
+      rgba(35, 35, 35, 0.3)
+    ),
+    url($src) no-repeat top center / cover;
+}
+
+@mixin coverImage() {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+}
+
+@mixin flexBox($conf: ()) {
+  $conf: extend(
+    (
+      display: flex,
+      align-items: stretch,
+      justify-content: space-between,
+      flex-wrap: nowrap,
+      flex-direction: row,
+    ),
+    $conf
+  );
+
+  display: map-get($conf, display);
+  align-items: map-get($conf, align-items);
+  justify-content: map-get($conf, justify-content);
+  flex-wrap: map-get($conf, flex-wrap);
+  flex-direction: map-get($conf, flex-direction);
+}
+
+@mixin absoluteCenter($dir, $position: absolute) {
+  position: $position;
+  @if $dir== "left" {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  @if $dir== "top" {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  @if $dir== "left0" {
+    top: 50%;
+    left: 0;
+  }
+  @if $dir== "top0" {
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  @if $dir== "both" {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  @if $dir== "bottom" {
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+  }
+}
+
+@mixin hideSroll() {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@mixin textClamp($rows: 1, $size: 100%) {
+  display: -webkit-box;
+  -webkit-line-clamp: $rows;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: $size;
+  max-width: $size;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+@mixin touchSlider($width: 80%, $gap: 2.5rem, $padding: 1rem) {
+  display: grid !important;
+  justify-content: flex-start !important;
+  grid-auto-columns: $width;
+  grid-auto-flow: column;
+  grid-template-columns: unset;
+  grid-column-gap: $gap;
+  overflow-x: auto;
+  padding: $padding;
+  scroll-snap-type: x mandatory;
+  scroll-snap-stop: always;
+  @include hideSroll();
+  & > * {
+    scroll-snap-align: center;
+    width: auto;
+  }
+}
+
+@mixin maxWidth($breakpoint) {
+  @media screen and (max-width: $breakpoint) {
+    @content;
+  }
+}
+
+@mixin minWidth($breakpoint) {
+  @media screen and (min-width: $breakpoint) {
+    @content;
+  }
+}

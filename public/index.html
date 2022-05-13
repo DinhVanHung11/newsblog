@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>News Blog</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="robots" content="index, follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+    <link rel="icon" href="favicon-16x16.png" type="image/x-icon" sizes="16x16">
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link href="https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&amp;family=Libre+Baskerville:wght@400;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/fontawesome.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" href="data:image/png;base64,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">
+  </head>
+  <body class="home-page">
+    <div class="progress-bar"></div>
+    <div class="wrapper">
+      <header class="header"> 
+        <div class="container header-container"> 
+          <div class="header-logo">
+            <div class="header-logo-link"><a class="header-logo-icon" href="#!"><i class="far fa-newspaper"></i></a><a class="header-logo-text global-logo" href="#!">NewsBlog</a></div>
+            <div class="header-sidebar"><i class="far fa-moon"></i>
+<i class="fas fa-bars header-sidebar-bar"></i>
+            </div>
+          </div>
+          <div class="header-search"> 
+            <button class="header-search-icon">
+               <i class="fas fa-search"></i></button>
+            <input class="header-search-input" type="text" placeholder="Discover news, articles and more">
+          </div>
+          <ul class="header-menu">
+            <li class="header-menu-item active"> <span class="global-text--primary header-menu-text">Home</span></li>
+            <li class="header-menu-item header-menu-dropdown"> <span class="global-text--primary header-menu-text">More</span><i class="fas fa-angle-down header-menu-down"></i>
+              <div class="header-dropdown"> <span class="global-text--primary header-dropdown-text">Beauty</span><span class="global-text--primary header-dropdown-text">Fashion & Style</span><span class="global-text--primary header-dropdown-text">Food & Wellness</span><span class="global-text--primary header-dropdown-text">Lifestyle</span><span class="global-text--primary header-dropdown-text">404 Page</span></div>
+            </li>
+            <li class="header-menu-item"> <span class="global-text--primary header-menu-text">Contact</span></li>
+            <li class="header-menu-item header-moon">
+               <i class="far fa-moon body-light"></i></li>
+          </ul>
+        </div>
+      </header>
+      <section class="feature"> 
+        <div class="container feature-container"> 
+          <div class="feature-list">
+            <div class="feature-item">
+               <i class="fas fa-bath"></i><span class="global-text--second feature-item-text">Beauty</span></div>
+            <div class="feature-item">
+               <i class="fas fa-female"></i><span class="global-text--second feature-item-text">Fashion & Style</span></div>
+            <div class="feature-item">
+               <i class="fas fa-utensils"></i><span class="global-text--second feature-item-text">Food & Wellness</span></div>
+            <div class="feature-item">
+               <i class="fas fa-life-ring"></i><span class="global-text--second feature-item-text">Lifestyle</span></div>
+          </div>
+          <div class="feature-main-list"> 
+            <div class="feature-main-item">
+              <div class="feature-content"><span class="feature-title">Feature</span>
+                <h2 class="global-title--big feature-heading">Create an Art that shows the beauty in everyone’s ideas of flaws.</h2>
+              </div>
+              <div class="feature-image"> <img src="https://wp.w3layouts.com/newsblog/wp-content/uploads/sites/22/2021/02/beauty.jpg" alt=""/></div>
+            </div>
+            <div class="feature-main-item">
+              <div class="feature-content"><span class="feature-title">Feature</span>
+                <h2 class="global-title--big feature-heading">Addicted to Fashion is the Armor to survive the reality of Everyday Life.</h2>
+              </div>
+              <div class="feature-image"> <img src="https://wp.w3layouts.com/newsblog/wp-content/uploads/sites/22/2021/02/fashion.jpg" alt=""/></div>
+            </div>
+            <div class="feature-main-item">
+              <div class="feature-content"><span class="feature-title">Feature</span>
+                <h2 class="global-title--big feature-heading">Create healthy habits, not restrictions. Wellness is a taste of being.</h2>
+              </div>
+              <div class="feature-image"> <img src="https://wp.w3layouts.com/newsblog/wp-content/uploads/sites/22/2021/02/food.jpg" alt=""/></div>
+            </div>
+            <div class="feature-main-item">
+              <div class="feature-content"><span class="feature-title">Feature</span>
+                <h2 class="global-title--big feature-heading">To succeed in Life, you need 3 things: a wishbone, a backbone, a funny bone.</h2>
+              </div>
+              <div class="feature-image"> <img src="https://wp.w3layouts.com/newsblog/wp-content/uploads/sites/22/2021/02/lifestyle.jpg" alt=""/></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="top">
+        <div class="container top-container"> 
+          <h3 class="global-title--second top-heading">Top Pick's of this month</h3>
+          <div class="top-list"> 
+            <div class="top-item"> 
+              <div class="top-content">
+                <h3 class="global-title--third top-title">Right food baked with natural ingredient, the use of best quality products</h3>
+                <div class="w3layout"><img src="https://secure.gravatar.com/avatar/328cc1f23e4a3b73aa60ee6ced1897a1?s=56&amp;d=mm&amp;r=g" alt=""/>
+                  <div class="w3layout-content">	
+                    <p class="global-text--primary w3layout-title">W3Layouts</p>
+                    <div class="w3layout-info"> <span class="w3layout-day w3layout-text">February 22, 2021</span><i class="far fa-clock"></i><span class="w3layout-time w3layout-text">7:29 am</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="top-item"> 
+              <div class="top-content">
+                <h3 class="global-title--third top-title">The 5 Nonnegotiables of a Healthy Quarantine food that a Doctor-Approved</h3>
+                <div class="w3layout"><img src="https://secure.gravatar.com/avatar/328cc1f23e4a3b73aa60ee6ced1897a1?s=56&amp;d=mm&amp;r=g" alt=""/>
+                  <div class="w3layout-content">	
+                    <p class="global-text--primary w3layout-title">W3Layouts</p>
+                    <div class="w3layout-info"> <span class="w3layout-day w3layout-text">February 22, 2021</span><i class="far fa-clock"></i><span class="w3layout-time w3layout-text">7:28 am</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="top-item">
+              <div class="top-content">
+                <h3 class="global-title--third top-title">Fashion is Creating your Beauty image. The New fashion starts here</h3>
+                <div class="w3layout"><img src="https://secure.gravatar.com/avatar/328cc1f23e4a3b73aa60ee6ced1897a1?s=56&amp;d=mm&amp;r=g" alt=""/>
+                  <div class="w3layout-content">	
+                    <p class="global-text--primary w3layout-title">W3Layouts</p>
+                    <div class="w3layout-info"> <span class="w3layout-day w3layout-text">February 22, 2021</span><i class="far fa-clock"></i><span class="w3layout-time w3layout-text">7:26 am</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="pick"> 
+        <div class="container pick-container"> 
+          <div class="pick-editor"> 
+            <h3 class="pick-editor-heading global-title--second">Editor's Pick </h3>
+            <div class="pick-editor-list"> 
+              <div class="pick-editor-item"> <img src="https://wp.w3layouts.com/newsblog/wp-content/uploads/sites/22/2021/02/fashion1.jpg" alt=""/>
+                <div class="pick-editor-content"> <span class="feature-title">Fashion & Style</span>
+                  <h3 class="pick-editor-title global-title--primary">What I’ll be Wearing this Party Season &amp; the Festive edit</h3>
+                  <div class="w3layout"><img src="https://secure.gravatar.com/avatar/328cc1f23e4a3b73aa60ee6ced1897a1?s=56&amp;d=mm&amp;r=g" alt=""/>
+                    <div class="w3layout-content">	
+                      <p class="global-text--primary w3layout-title">W3Layouts</p>
+                      <div class="w3layout-info"> <span class="w3layout-day w3layout-text">February 22, 2021</span><i class="far fa-clock"></i><span class="w3layout-time w3layout-text">7:49 am</span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="pick-editor-item"> <img src="https://wp.w3layouts.com/newsblog/wp-content/uploads/sites/22/2021/02/fashion2.jpg" alt=""/>
+                <div class="pick-editor-content"> <span class="feature-title">Fashion & Style</span>
+                  <h3 class="pick-editor-title global-title--primary">An easy Guide to buying Denim &amp; My favorite styles</h3>
+                  <div class="w3layout"><img src="https://secure.gravatar.com/avatar/328cc1f23e4a3b73aa60ee6ced1897a1?s=56&amp;d=mm&amp;r=g" alt=""/>
+                    <div class="w3layout-content">	
+                      <p class="global-text--primary w3layout-title">W3Layouts</p>
+                      <div class="w3layout-info"> <span class="w3layout-day w3layout-text">February 22, 2021</span><i class="far fa-clock"></i><span class="w3layout-time w3layout-text">7:49 am</span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="pick-editor-item"> <img src="https://wp.w3layouts.com/newsblog/wp-content/uploads/sites/22/2021/02/fashion3.jpg" alt=""/>
+                <div class="pick-editor-content"> <span class="feature-title">Fashion & Style</span>
+                  <h3 class="pick-editor-title global-title--primary">3 New Outfit Formulas To Add To Your Capsule Wardrobe</h3>
+                  <div class="w3layout"><img src="https://secure.gravatar.com/avatar/328cc1f23e4a3b73aa60ee6ced1897a1?s=56&amp;d=mm&amp;r=g" alt=""/>
+                    <div class="w3layout-content">	
+                      <p class="global-text--primary w3layout-title">W3Layouts</p>
+                      <div class="w3layout-info"> <span class="w3layout-day w3layout-text">February 22, 2021</span><i class="far fa-clock"></i><span class="w3layout-time w3layout-text">7:48 am</span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="pick-editor-item"> <img src="https://wp.w3layouts.com/newsblog/wp-content/uploads/sites/22/2021/02/fashion4.jpg" alt=""/>
+                <div class="pick-editor-content"> <span class="feature-title">Fashion & Style</span>
+                  <h3 class="pick-editor-title global-title--primary">3 New Outfit Formulas To Add To Your Capsule Wardrobe</h3>
+                  <div class="w3layout"><img src="https://secure.gravatar.com/avatar/328cc1f23e4a3b73aa60ee6ced1897a1?s=56&amp;d=mm&amp;r=g" alt=""/>
+                    <div class="w3layout-content">	
+                      <p class="global-text--primary w3layout-title">W3Layouts</p>
+                      <div class="w3layout-info"> <span class="w3layout-day w3layout-text">February 22, 2021</span><i class="far fa-clock"></i><span class="w3layout-time w3layout-text">7:47 am</span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="pick-editor-advertise"> 
+              <h3 class="global-title--second pick-editor-advertise-text">Advertise with us</h3>
+              <button class="pick-button">Learn more</button>
+            </div>
+          </div>
+          <div class="pick-topic">
+            <h3 class="pick-topic-heading global-title--second">Topics</h3>
+            <div class="pick-topic-item"> <span class="pick-topic-text">Beauty</span></div>
+            <div class="pick-topic-item"> <span class="pick-topic-text">Fashion & Style</span></div>
+            <div class="pick-topic-item"> <span class="pick-topic-text">Featured</span></div>
+            <div class="pick-topic-item"> <span class="pick-topic-text">Food & Wellness</span></div>
+            <div class="pick-topic-item"> <span class="pick-topic-text">Lifestyle</span></div>
+            <div class="pick-topic-item"> <span class="pick-topic-text">Top Picks</span></div>
+            <div class="pick-topic-item"> <span class="pick-topic-text">Uncategorized</span></div>
+            <h3 class="h3 pick-topic-heading-our global-title--second">Our sponsers</h3><img src="https://wp.w3layouts.com/newsblog/wp-content/themes/news-blog/assets/images/ad.jpg" alt="">
+            <p class="pick-topic-withus">Advertise with us</p>
+          </div>
+        </div>
+      </section>
+      <section class="fashion"> 
+        <div class="container fashion-container"> 
+          <div class="fashion-header">
+            <h3 class="global-title--second fashion-heading">Fashion and style</h3>
+            <button class="fashion-btn">View more</button>
+          </div>
+          <div class="fashion-list"> 
+            <div class="pick-editor-item"> <img src="https://wp.w3layouts.com/newsblog/wp-content/uploads/sites/22/2021/02/fashion1.jpg" alt=""/>
+              <div class="pick-editor-content"> 
+                <h3 class="pick-editor-title global-title--primary">What I’ll be Wearing this Party Season &amp; the Festive edit</h3>
+                <div class="w3layout"><img src="https://secure.gravatar.com/avatar/328cc1f23e4a3b73aa60ee6ced1897a1?s=56&amp;d=mm&amp;r=g" alt=""/>
+                  <div class="w3layout-content">	
+                    <p class="global-text--primary w3layout-title">W3Layouts</p>
+                    <div class="w3layout-info"> <span class="w3layout-day w3layout-text">February 22, 2021</span><i class="far fa-clock"></i><span class="w3layout-time w3layout-text">7:49 am</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="pick-editor-item"> <img src="https://wp.w3layouts.com/newsblog/wp-content/uploads/sites/22/2021/02/fashion2.jpg" alt=""/>
+              <div class="pick-editor-content"> 
+                <h3 class="pick-editor-title global-title--primary">An easy Guide to buying Denim &amp; My favorite styles</h3>
+                <div class="w3layout"><img src="https://secure.gravatar.com/avatar/328cc1f23e4a3b73aa60ee6ced1897a1?s=56&amp;d=mm&amp;r=g" alt=""/>
+                  <div class="w3layout-content">	
+                    <p class="global-text--primary w3layout-title">W3Layouts</p>
+                    <div class="w3layout-info"> <span class="w3layout-day w3layout-text">February 22, 2021</span><i class="far fa-clock"></i><span class="w3layout-time w3layout-text">7:49 am</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="pick-editor-item"> <img src="https://wp.w3layouts.com/newsblog/wp-content/uploads/sites/22/2021/02/fashion3.jpg" alt=""/>
+              <div class="pick-editor-content"> 
+                <h3 class="pick-editor-title global-title--primary">3 New Outfit Formulas To Add To Your Capsule Wardrobe</h3>
+                <div class="w3layout"><img src="https://secure.gravatar.com/avatar/328cc1f23e4a3b73aa60ee6ced1897a1?s=56&amp;d=mm&amp;r=g" alt=""/>
+                  <div class="w3layout-content">	
+                    <p class="global-text--primary w3layout-title">W3Layouts</p>
+                    <div class="w3layout-info"> <span class="w3layout-day w3layout-text">February 22, 2021</span><i class="far fa-clock"></i><span class="w3layout-time w3layout-text">7:48 am</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="beauty">
+        <div class="container fashion-container"> 
+          <div class="fashion-header">
+            <h3 class="global-title--second fashion-heading">Beauty</h3>
+            <button class="fashion-btn">View more</button>
+          </div>
+          <div class="fashion-list"> 
+            <div class="pick-editor-item"> <img src="https://wp.w3layouts.com/newsblog/wp-content/uploads/sites/22/2021/01/beauty1.jpg" alt=""/>
+              <div class="pick-editor-content"> 
+                <h3 class="pick-editor-title global-title--primary">Why you need a Spa Day, Reasons to Get a Package</h3>
+                <div class="w3layout"><img src="https://secure.gravatar.com/avatar/328cc1f23e4a3b73aa60ee6ced1897a1?s=56&amp;d=mm&amp;r=g" alt=""/>
+                  <div class="w3layout-content">	
+                    <p class="global-text--primary w3layout-title">W3Layouts</p>
+                    <div class="w3layout-info"> <span class="w3layout-day w3layout-text">January 8, 2021</span><i class="far fa-clock"></i><span class="w3layout-time w3layout-text">2:12 pm</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="pick-editor-item"> <img src="https://wp.w3layouts.com/newsblog/wp-content/uploads/sites/22/2021/01/beauty2.jpg" alt=""/>
+              <div class="pick-editor-content"> 
+                <h3 class="pick-editor-title global-title--primary">Winter: 4 Ways to Feel Great during the Cold Weather</h3>
+                <div class="w3layout"><img src="https://secure.gravatar.com/avatar/328cc1f23e4a3b73aa60ee6ced1897a1?s=56&amp;d=mm&amp;r=g" alt=""/>
+                  <div class="w3layout-content">	
+                    <p class="global-text--primary w3layout-title">W3Layouts</p>
+                    <div class="w3layout-info"> <span class="w3layout-day w3layout-text">January 8, 2021</span><i class="far fa-clock"></i><span class="w3layout-time w3layout-text">2:11 pm</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="pick-editor-item"> <img src="https://wp.w3layouts.com/newsblog/wp-content/uploads/sites/22/2021/01/beauty3.jpg" alt=""/>
+              <div class="pick-editor-content"> 
+                <h3 class="pick-editor-title global-title--primary">Key to Glowing Skin: 5 tips for hydration and protection</h3>
+                <div class="w3layout"><img src="https://secure.gravatar.com/avatar/328cc1f23e4a3b73aa60ee6ced1897a1?s=56&amp;d=mm&amp;r=g" alt=""/>
+                  <div class="w3layout-content">	
+                    <p class="global-text--primary w3layout-title">W3Layouts</p>
+                    <div class="w3layout-info"> <span class="w3layout-day w3layout-text">January 8, 2021</span><i class="far fa-clock"></i><span class="w3layout-time w3layout-text">2:10 pm</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="pick-editor-item"> <img src="https://wp.w3layouts.com/newsblog/wp-content/uploads/sites/22/2021/01/beauty4.jpg" alt=""/>
+              <div class="pick-editor-content"> 
+                <h3 class="pick-editor-title global-title--primary">Take steps to beautiful Summer Feet with Spa experience</h3>
+                <div class="w3layout"><img src="https://secure.gravatar.com/avatar/328cc1f23e4a3b73aa60ee6ced1897a1?s=56&amp;d=mm&amp;r=g" alt=""/>
+                  <div class="w3layout-content">	
+                    <p class="global-text--primary w3layout-title">W3Layouts</p>
+                    <div class="w3layout-info"> <span class="w3layout-day w3layout-text">January 8, 2021</span><i class="far fa-clock"></i><span class="w3layout-time w3layout-text">2:09 pm</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="trending">
+        <div class="container fashion-container"> 
+          <div class="fashion-header">
+            <h3 class="global-title--second fashion-heading">Trending Now</h3>
+          </div>
+          <div class="fashion-list"> 
+            <div class="pick-editor-item"> <img src="https://wp.w3layouts.com/newsblog/wp-content/uploads/sites/22/2021/02/lifestyle5.jpg" alt=""/>
+              <div class="pick-editor-content"> <span class="feature-title">Fashion & Style</span>
+                <h3 class="pick-editor-title global-title--primary">3 New Outfit Formulas To Add To Your Capsule Wardrobe</h3>
+                <div class="w3layout"><img src="https://secure.gravatar.com/avatar/328cc1f23e4a3b73aa60ee6ced1897a1?s=56&amp;d=mm&amp;r=g" alt=""/>
+                  <div class="w3layout-content">	
+                    <p class="global-text--primary w3layout-title">W3Layouts</p>
+                    <div class="w3layout-info"> <span class="w3layout-day w3layout-text">February 27, 2021</span><i class="far fa-clock"></i><span class="w3layout-time w3layout-text">7:48 am</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="pick-editor-item"> <img src="https://wp.w3layouts.com/newsblog/wp-content/uploads/sites/22/2021/02/lifestyle7.jpg" alt=""/>
+              <div class="pick-editor-content"> <span class="feature-title">Fashion & Style</span>
+                <h3 class="pick-editor-title global-title--primary">Blog Guide: How to Start a Personal Blog on WordPress</h3>
+                <div class="w3layout"><img src="https://secure.gravatar.com/avatar/328cc1f23e4a3b73aa60ee6ced1897a1?s=56&amp;d=mm&amp;r=g" alt=""/>
+                  <div class="w3layout-content">	
+                    <p class="global-text--primary w3layout-title">W3Layouts</p>
+                    <div class="w3layout-info"> <span class="w3layout-day w3layout-text">February 27, 2021</span><i class="far fa-clock"></i><span class="w3layout-time w3layout-text">7:48 am</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="subcribe"> 
+        <div class="container subcribe-container"> 
+          <h3 class="global-title--second subcribe-heading">Subscribe to our newsletter!</h3>
+          <p class="global-text--primary subcribe-desc">We'll send you the best of our blog just once a month. We promise.</p>
+          <form class="subcribe-form" action="">
+            <div class="subcribe-input-box">
+              <input class="subcribe-input" type="text" placeholder="Email address" required><i class="fas fa-times"></i>
+<i class="fas fa-check"></i>
+            </div>
+            <button class="subcribe-btn">Subcribe</button>
+          </form>
+        </div>
+      </section>
+      <footer class="footer"> 
+        <div class="container footer-container">
+          <div class="footer-logo"> 
+            <div class="footer-logo-main"><a class="header-logo-icon" href="#!"><i class="far fa-newspaper"></i></a><a class="header-logo-text global-logo" href="#!">NewsBlog</a></div>
+            <p class="footer-logo-copyright global-text--primary">© 2022. All Rights Reserved.</p>
+            <p class="footer-logo-big"> <span class="footer-logo-text-black global-text--primary">Theme by </span><span class="footer-logo-text-blue global-text--primary">W3Layouts.</span></p>
+          </div>
+          <div class="footer-recent">
+            <h4 class="footer-title">Recent Posts</h4>
+            <div class="footer-recent-item"><span class="global-text--third footer-recent-desc">3 New Outfit Formulas To Add To Your Capsule Wardrobe</span><span class="global-text--small footer-recent-time">February 27, 2021</span></div>
+            <div class="footer-recent-item"><span class="global-text--third footer-recent-desc">Blog Guide: How to Start a Personal Blog on WordPress</span><span class="global-text--small footer-recent-time">February 27, 2021</span></div>
+            <div class="footer-recent-item"><span class="global-text--third footer-recent-desc">The technical setup when starting a personal blog</span><span class="global-text--small footer-recent-time">February 27, 2021</span></div>
+          </div>
+          <div class="footer-category">
+            <h4 class="footer-title">Categories</h4><span class="global-text--third footer-category-desc">Beauty</span><span class="global-text--third footer-category-desc">Fashion & Style</span><span class="global-text--third footer-category-desc">Featured</span><span class="global-text--third footer-category-desc">Food & Wellness</span><span class="global-text--third footer-category-desc">Lifestyle</span><span class="global-text--third footer-category-desc">Top Picks</span><span class="global-text--third footer-category-desc">Uncategorized</span>
+          </div>
+          <div class="footer-social"> 
+            <h4 class="footer-title">Social Media</h4>
+            <ul class="footer-social-menu"> 
+              <li class="footer-social-item"> <a class="footer-social-link" href="#!"><i class="fab footer-social-facebook fa-facebook-f"></i><span class="global-text--third footer-social-text">Facebook</span></a></li>
+              <li class="footer-social-item"> <a class="footer-social-link" href="#!"><i class="fab footer-social-twitter fa-twitter"></i><span class="global-text--third footer-social-text">Twitter</span></a></li>
+              <li class="footer-social-item"> <a class="footer-social-link" href="#!"><i class="fab footer-social-linkedin fa-linkedin-in"></i><span class="global-text--third footer-social-text">Linkedin</span></a></li>
+              <li class="footer-social-item"> <a class="footer-social-link" href="#!"><i class="fas footer-social-dribble   fa-basketball-ball"></i><span class="global-text--third footer-social-text">Dribble</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </footer><a class="back-to-top" href="#">
+         <i class="fas fa-angle-up"></i></a><i class="fas fa-angle-double-left show-sidebar"></i>
+      <div class="sidebar"> 
+        <div class="sidebar-item">
+           <i class="fas fa-angle-double-right  hide-sidebar"></i></div>
+        <div class="sidebar-item">
+           <i class="fas fa-arrow-left"></i><span class="sidebar-text">Back</span></div>
+        <div class="sidebar-item">
+           <i class="fas fa-download"></i><span class="sidebar-text">Download</span></div>
+        <div class="sidebar-item">
+           <i class="fas fa-shopping-cart"></i><span class="sidebar-text">Buy</span></div>
+      </div>
+    </div>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="scripts/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+.fashion {
+  padding: 3rem 0 7rem 0;
+  background-color: #f8f9fa;
+  &-header {
+    @include flexBox(
+      (
+        align-items: center,
+      )
+    );
+    margin-bottom: 3rem;
+  }
+  &-btn {
+    padding: 1rem 2rem;
+    background-color: #e2e8f0;
+    border-radius: 1.5rem;
+    color: $gray-color;
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    transition: all 0.2s;
+    &:hover {
+      color: white;
+      background-color: $blue-color;
+    }
+  }
+  &-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 2.5rem;
+  }
+  .pick-editor-item {
+    width: 100%;
+  }
+
+  @include maxWidth(1023px) {
+    &-list {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  @include maxWidth(767px) {
+    &-list {
+      display: block;
+    }
+  }
+}

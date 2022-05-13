@@ -1,0 +1,47 @@
+block mixins
+	include ../blocks/mixins
+block vars
+	-title = 'Site'
+	-bodyClass = ''
+
+doctype html
+html(lang="en")
+	head
+		meta(charset="utf-8")
+		title=title
+		meta(name="description", content="")
+		meta(name="keywords", content="")
+		meta(name="robots", content="index, follow")
+		meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1.0")
+		link(rel="icon", href="favicon-16x16.png", type="image/x-icon", sizes="16x16")
+		link(rel="stylesheet", href="styles/reset.css")
+		link(rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css")
+		link(href="https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet")
+		link(rel="stylesheet", href="styles/fontawesome.css")
+		link(rel="stylesheet", href="styles/styles.css")
+		link(rel="icon", href="data:image/png;base64,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")
+	body(class=bodyClass)
+		.progress-bar
+		.wrapper
+			block header
+				include ../blocks/header
+			block container
+			block footer
+				include ../blocks/footer
+			a(href="#").back-to-top 
+				<i class="fas fa-angle-up"></i>
+			<i class="fas fa-angle-double-left show-sidebar"></i>
+			.sidebar 
+				.sidebar-item 
+					<i class="fas fa-angle-double-right  hide-sidebar"></i>
+				.sidebar-item 
+					<i class="fas fa-arrow-left"></i>
+					span.sidebar-text Back
+				.sidebar-item 
+					<i class="fas fa-download"></i>
+					span.sidebar-text Download
+				.sidebar-item 
+					<i class="fas fa-shopping-cart"></i>
+					span.sidebar-text Buy
+		block layer
+		include ../blocks/scripts

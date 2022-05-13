@@ -1,0 +1,31 @@
+header.header 
+  .container.header-container 
+    .header-logo
+      .header-logo-link
+        a(href="#!").header-logo-icon
+          <i class="far fa-newspaper"></i>
+        a(href="#!").header-logo-text.global-logo NewsBlog
+      .header-sidebar
+        <i class="far fa-moon"></i>
+        <i class="fas fa-bars header-sidebar-bar"></i>
+    .header-search 
+      button.header-search-icon 
+        <i class="fas fa-search"></i>
+      input(type="text" placeholder="Discover news, articles and more").header-search-input
+    ul.header-menu
+      li.header-menu-item.active 
+        span.global-text--primary.header-menu-text Home
+      li.header-menu-item.header-menu-dropdown 
+        span.global-text--primary.header-menu-text More
+        <i class="fas fa-angle-down header-menu-down"></i>
+        .header-dropdown 
+          span.global-text--primary.header-dropdown-text Beauty
+          span.global-text--primary.header-dropdown-text Fashion & Style
+          span.global-text--primary.header-dropdown-text Food & Wellness
+          span.global-text--primary.header-dropdown-text Lifestyle
+          span.global-text--primary.header-dropdown-text 404 Page
+      li.header-menu-item 
+        span.global-text--primary.header-menu-text Contact
+      li.header-menu-item.header-moon 
+        <i class="far fa-moon body-light"></i>
+    

@@ -1,0 +1,45 @@
+.beauty {
+  padding: 7rem 0;
+  background-color: $bg-color;
+  .fashion-list {
+    grid-template-columns: 1fr 1fr;
+  }
+  .pick-editor-item {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    > img {
+      width: 22rem;
+      border-radius: 2rem 0 0 2rem;
+      height: 30rem;
+      object-fit: cover;
+    }
+  }
+  @include maxWidth(1280px) {
+    .pick-editor-item {
+      > img {
+        width: 17rem;
+      }
+    }
+  }
+  @include maxWidth(1023px) {
+    .fashion-list {
+      display: block;
+    }
+    .pick-editor-item {
+      margin-bottom: 3rem;
+      > img {
+        width: 27rem;
+      }
+    }
+  }
+  @include maxWidth(767px) {
+    .pick-editor-item {
+      display: block;
+      margin-bottom: 3rem;
+      > img {
+        width: 100%;
+      }
+    }
+  }
+}

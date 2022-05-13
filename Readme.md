@@ -1,0 +1,3 @@
+- Required NodeJS installed
+- onlyone: `npm install` then run `npm run build`
+- `npm run dev`

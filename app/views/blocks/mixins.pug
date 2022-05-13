@@ -1,0 +1,32 @@
+mixin featureMainItem(heading,src)
+	.feature-main-item
+		.feature-content
+			span.feature-title Feature
+			h2.global-title--big.feature-heading= heading
+		.feature-image 
+			img(src= src, alt="")
+
+mixin w3layout(day,time)
+	.w3layout
+		img(src="https://secure.gravatar.com/avatar/328cc1f23e4a3b73aa60ee6ced1897a1?s=56&d=mm&r=g", alt="")
+		.w3layout-content 	
+			p.global-text--primary.w3layout-title W3Layouts
+			.w3layout-info 
+				span.w3layout-day.w3layout-text= day
+				<i class="far fa-clock"></i>
+				span.w3layout-time.w3layout-text= time
+
+mixin pickEditorItem(src,title,day,time)
+	.pick-editor-item 
+		img(src= src, alt="")
+		.pick-editor-content 
+			span.feature-title Fashion & Style
+			h3.pick-editor-title.global-title--primary= title
+			+w3layout(day,time)
+
+mixin fashionItem(src,title,day,time)
+	.pick-editor-item 
+		img(src= src, alt="")
+		.pick-editor-content 
+			h3.pick-editor-title.global-title--primary= title
+			+w3layout(day,time)

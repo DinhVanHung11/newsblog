@@ -1,0 +1,119 @@
+.footer {
+  padding: 7rem 0;
+  &-container {
+    display: flex;
+    align-items: flex-start;
+  }
+  &-logo {
+    width: 37rem;
+    flex-shrink: 0;
+  }
+  &-logo-main {
+    margin-bottom: 2.2rem;
+  }
+  &-logo-copyright {
+    color: $gray-color;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+  }
+  &-logo-big {
+    display: flex;
+    align-items: flex-end;
+    gap: 0 0.4rem;
+  }
+  &-logo-text-blue,
+  &-logo-text-black {
+    font-weight: 600;
+    color: $black-color;
+    font-family: $second-font;
+  }
+  &-logo-text-blue {
+    color: $blue-color;
+    cursor: pointer;
+  }
+  &-title {
+    font-size: 2rem;
+    line-height: 2.8rem;
+    font-weight: 600;
+    font-family: $second-font;
+    margin-bottom: 2.2rem;
+  }
+  &-recent {
+    margin-right: 4rem;
+    max-width: 22.7rem;
+    &-time,
+    &-desc {
+      color: $gray-color;
+    }
+    &-desc {
+      transition: all 0.2s;
+      &:hover {
+        color: $black-color;
+      }
+    }
+  }
+  &-recent-item {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+  }
+  &-category {
+    display: flex;
+    flex-direction: column;
+    margin-right: 12rem;
+    &-desc {
+      cursor: pointer;
+      margin-bottom: 1.2rem;
+      color: $gray-color;
+      display: inline-block;
+      transition: all 0.2s;
+      &:hover {
+        color: $black-color;
+      }
+    }
+  }
+  &-social {
+    display: flex;
+    flex-direction: column;
+    &-facebook {
+      color: #3a5998;
+    }
+    &-twitter {
+      color: $blue-light-color;
+    }
+    &-linkedin {
+      color: $blue-lighter-color;
+    }
+    &-dribble {
+      color: $pink-color;
+    }
+  }
+  &-social-link {
+    display: flex;
+    align-items: center;
+    gap: 0 0.6rem;
+    margin-bottom: 1.2rem;
+    i {
+      width: 2rem;
+    }
+    &:hover {
+      .footer-social-text {
+        color: $black-color;
+      }
+    }
+  }
+  &-social-text {
+    color: $gray-color;
+    transition: all 0.2s;
+  }
+  @include maxWidth(1023px) {
+    &-container {
+      flex-wrap: wrap;
+    }
+    &-logo {
+      width: 100%;
+      margin-bottom: 5rem;
+    }
+  }
+}

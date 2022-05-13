@@ -1,0 +1,40 @@
+.trending {
+  padding: 7rem 0;
+  background-color: #f8f9fa;
+  .fashion-list {
+    grid-template-columns: 1fr 1fr;
+  }
+  .pick-editor-item {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    > img {
+      width: 22rem;
+      object-fit: cover;
+      border-radius: 2rem 0 0 2rem;
+      height: 33rem;
+    }
+  }
+  @include maxWidth(1023px) {
+    .fashion-list {
+      display: block;
+    }
+    .pick-editor-item {
+      margin-bottom: 3rem;
+    }
+  }
+  @include maxWidth(1023px) {
+    .pick-editor-item {
+      display: block;
+      margin-bottom: 3rem;
+      > img {
+        width: 100%;
+        border-radius: 2rem 2rem 0 0;
+        height: 25rem;
+      }
+    }
+  }
+  @include maxWidth(767px) {
+    padding: 3rem 0;
+  }
+}
